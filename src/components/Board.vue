@@ -90,6 +90,8 @@ export default {
       this.clearBoard();
     },
     random(percent) {
+      this.clearBoard();
+
       for (let row of this.board) {
         for (let cell of row) {
           const aliveChance = Math.random() * 100;
@@ -131,9 +133,6 @@ export default {
       this.generations = 0;
       this.tickInterval = [];
       this.init();
-    },
-    setSpeed(speed) {
-
     },
     tick() {
       for (let row of this.board) {
